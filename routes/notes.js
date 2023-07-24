@@ -13,13 +13,13 @@ notes.post("/", (req, res) => {
   console.info(`${req.method} request received to add a note`);
   console.log(req.body);
 
-  const { username, topic, note } = req.body;
+  const { noteTitle, noteDetail } = req.body;
 
   if (req.body) {
     const newTip = {
-      username,
-      note,
-      topic,
+      noteTitle,
+      noteDetail,
+      // topic,
       // note_id: uuid(),
     };
 
