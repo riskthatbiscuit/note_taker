@@ -14,7 +14,7 @@ notesList
     const newnote = {
       noteTitle,
       noteDetail,
-      noteType: 'Complaint',
+      // noteType: 'Complaint',
     };
     console.log('made it here');
     // Fetch POST request to the server

@@ -1,7 +1,22 @@
 [
     {
         "title": "Test Title",
-        "text": "Test text"
+        "text": "Test text",
+        "id": 1
     },
-    {}
+    {
+        "title": "Note 1",
+        "text": "This is the first entry!",
+        "id": "27cc"
+    },
+    {
+        "title": "asdf",
+        "text": "asdf",
+        "id": "ee12"
+    },
+    {
+        "title": "Note 2",
+        "text": "This is the second real note",
+        "id": "83bc"
+    }
 ]
