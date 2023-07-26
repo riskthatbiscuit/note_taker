@@ -4,7 +4,7 @@ const notesList = document.getElementById('list-group');
 notesList
   .addEventListener('submit', (e) => {
     e.preventDefault();
-
+    console.log('in scripts/notes.js')
     // Get the note text from the DOM and assign it to a variable
     let noteTitle = document.getElementById('note-title').value;
     // Get the username text and add it to a variable
@@ -16,9 +16,9 @@ notesList
       noteDetail,
       noteType: 'Complaint',
     };
-
+    console.log('made it here');
     // Fetch POST request to the server
-    fetch('api/notes', {
+    fetch('/notes', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -30,8 +30,8 @@ notesList
         alert(data.status);
         noteTitle = '';
         noteDetail = '';
+      })
+      .catch((error) => {
+        console.error('Error:', error);
       });
-  })
-  .catch((error) => {
-    console.error('Error:', error);
   });
