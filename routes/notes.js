@@ -1,5 +1,4 @@
 const notes = require("express").Router();
-const { appendFile } = require("fs");
 const { readFromFile, readAndAppend, writeToFile } = require("../helpers/fsUtils");
 const uuid = require("../helpers/uuid");
 
@@ -29,7 +28,7 @@ notes.post('/', (req, res) => {
     readAndAppend(newNote, "./db/notes.json");
     res.status(200).json(`note added successfully 🚀`);
   } else {
-    res.error("Error in adding note");
+    res.status(400).error("Error in adding note");
   }
 });
 
@@ -44,14 +43,12 @@ notes.delete('/:id', (req, res) => {
   readFromFile("./db/notes.json")
     .then((data) => {
       const notesArray = JSON.parse(data);
-      console.log(notesArray);
       const noteIndex = notesArray.findIndex((note) => note.id === noteId);
       console.log(noteIndex);
       if (noteIndex !== -1) {
         notesArray.splice(noteIndex,1);
-        console.log(notesArray);
         writeToFile("./db/notes.json", notesArray)
-        res.status(200).json(`note added successfully 🚀`);
+        res.status(200).json(`Note added successfully 🚀`);
       } else {
         res.status(400).json("Note not found");
       }
