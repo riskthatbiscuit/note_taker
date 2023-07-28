@@ -29,6 +29,11 @@
 4. To view a saved note, click on its title in the list of notes.
 5. To delete a note, click on the trash icon next to the note in the list.
 
+## ScreenShot
+![Screenshot](/notetaker_screenshot.png)
+
+## Video Link
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE). 📄
