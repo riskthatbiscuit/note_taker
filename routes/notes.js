@@ -1,5 +1,6 @@
 const notes = require("express").Router();
-const { readFromFile, readAndAppend } = require("../helpers/fsUtils");
+const { appendFile } = require("fs");
+const { readFromFile, readAndAppend, writeToFile } = require("../helpers/fsUtils");
 const uuid = require("../helpers/uuid");
 
 
@@ -26,10 +27,38 @@ notes.post('/', (req, res) => {
     console.log('NEWNOTE')
     console.log(newNote)
     readAndAppend(newNote, "./db/notes.json");
-    res.json(`note added successfully 🚀`);
+    res.status(200).json(`note added successfully 🚀`);
   } else {
     res.error("Error in adding note");
   }
 });
+
+
+// DELETE Route for notes
+notes.delete('/:id', (req, res) => {
+  console.log(`${req.method} request recieved to delete note`);
+  
+  const noteId = req.params.id;
+  console.log(noteId)
+
+  readFromFile("./db/notes.json")
+    .then((data) => {
+      const notesArray = JSON.parse(data);
+      console.log(notesArray);
+      const noteIndex = notesArray.findIndex((note) => note.id === noteId);
+      console.log(noteIndex);
+      if (noteIndex !== -1) {
+        notesArray.splice(noteIndex,1);
+        console.log(notesArray);
+        writeToFile("./db/notes.json", notesArray)
+        res.status(200).json(`note added successfully 🚀`);
+      } else {
+        res.status(400).json("Note not found");
+      }
+    })
+    .catch((err) => {
+      res.status(500).json({status:"Server error"});
+    })
+})
 
 module.exports = notes;
