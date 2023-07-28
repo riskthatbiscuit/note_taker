@@ -38,13 +38,11 @@ notes.delete('/:id', (req, res) => {
   console.log(`${req.method} request recieved to delete note`);
   
   const noteId = req.params.id;
-  console.log(noteId)
 
   readFromFile("./db/notes.json")
     .then((data) => {
       const notesArray = JSON.parse(data);
       const noteIndex = notesArray.findIndex((note) => note.id === noteId);
-      console.log(noteIndex);
       if (noteIndex !== -1) {
         notesArray.splice(noteIndex,1);
         writeToFile("./db/notes.json", notesArray)
