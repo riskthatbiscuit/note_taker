@@ -2,6 +2,10 @@
 
 📝 Note Taker is a web application that allows users to create, view, and manage notes. Users can write notes with a title and detailed content, and they have the option to delete notes as well. The application is built using HTML, CSS, and JavaScript for the client-side, and Node.js with Express for the server-side.
 
+## Deloyed Application
+https://lit-ocean-13757-64238d13443d.herokuapp.com/
+
+
 ## Features
 
 - ✏️ Create a new note with a title and detailed content.
