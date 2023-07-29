@@ -1,32 +1,27 @@
 [
-  {
-    "id": "1",
-    "title": "Today's Adventure",
-    "text": "Went for a hike in the mountains. The view was breathtaking! 🏞️"
-  },
-  {
-    "id": "2",
-    "title": "Delicious Treat",
-    "text": "Tried a new ice cream flavor today - cookies and cream. Yummy! 🍦"
-  },
-  {
-    "id": "3",
-    "title": "Movie Night",
-    "text": "Watched a hilarious comedy movie with friends. We laughed so much! 😂🎬"
-  },
-  {
-    "id": "4",
-    "title": "Sunny Day",
-    "text": "Enjoyed a sunny day at the beach. The waves were perfect for surfing! 🏄‍♂️☀️"
-  },
-  {
-    "id": "5",
-    "title": "Bookworm Mode",
-    "text": "Read an amazing fantasy novel. Couldn't put it down until I finished! 📚"
-  },
-  {
-    "id": "6",
-    "title": "Cooking Experiment",
-    "text": "Tried a new recipe for dinner. It turned out surprisingly delicious! 🍽️"
-  }
+    {
+        "id": "1",
+        "title": "Today's Adventure",
+        "text": "Went for a hike in the mountains. The view was breathtaking! 🏞️"
+    },
+    {
+        "id": "2",
+        "title": "Delicious Treat",
+        "text": "Tried a new ice cream flavor today - cookies and cream. Yummy! 🍦"
+    },
+    {
+        "id": "3",
+        "title": "Movie Night",
+        "text": "Watched a hilarious comedy movie with friends. We laughed so much! 😂🎬"
+    },
+    {
+        "id": "4",
+        "title": "Sunny Day",
+        "text": "Enjoyed a sunny day at the beach. The waves were perfect for surfing! 🏄‍♂️☀️"
+    },
+    {
+        "id": "6",
+        "title": "Cooking Experiment",
+        "text": "Tried a new recipe for dinner. It turned out surprisingly delicious! 🍽️"
+    }
 ]
